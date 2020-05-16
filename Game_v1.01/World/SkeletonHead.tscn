@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Blender/king_eyes_Diffuse.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="polygons" type="Node2D" parent="."]
+
+[node name="head" type="Polygon2D" parent="polygons"]
+position = Vector2( 613.911, 93.4914 )
+texture = ExtResource( 1 )
+skeleton = NodePath("../../Skeleton2D")
+polygon = PoolVector2Array( 255.714, 25.7143, 58.5714, 4.28571, 11.4286, 68.5714, 7.14286, 301.429, 30, 342.857, 98.218, 308.218, 112.857, 371.429, 167.143, 368.571, 219.426, 343.233, 259.082, 326.904, 303.404, 353.73, 340, 370, 402.857, 372.857, 422.857, 312.857, 477.143, 347.143, 512.857, 295.714, 514.286, 98.5714, 464.286, 5.71429 )
+uv = PoolVector2Array( 255.714, 25.7143, 58.5714, 4.28571, 11.4286, 68.5714, 7.14286, 301.429, 30, 342.857, 98.218, 308.218, 112.857, 371.429, 167.143, 368.571, 219.426, 343.233, 259.082, 326.904, 303.404, 353.73, 340, 370, 402.857, 372.857, 422.857, 312.857, 477.143, 347.143, 512.857, 295.714, 514.286, 98.5714, 464.286, 5.71429 )
+bones = [ NodePath("head"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("head/jaw"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+
+[node name="jaw" type="Polygon2D" parent="polygons"]
+position = Vector2( 611.169, 89.8092 )
+texture = ExtResource( 1 )
+skeleton = NodePath("../../Skeleton2D")
+polygon = PoolVector2Array( 170, 367.143, 260, 334.286, 331.429, 368.571, 327.143, 444.286, 304.286, 511.429, 208.571, 510, 185.714, 438.571 )
+uv = PoolVector2Array( 170, 367.143, 260, 334.286, 331.429, 368.571, 315.714, 412.857, 305.714, 441.429, 252.857, 445.714, 195.714, 442.857 )
+bones = [ NodePath("head"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ), NodePath("head/jaw"), PoolRealArray( 1, 1, 1, 1, 1, 1, 0.97 ) ]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+[node name="head" type="Bone2D" parent="Skeleton2D"]
+position = Vector2( 870.924, 374.594 )
+rotation = 1.5708
+rest = Transform2D( -4.37114e-08, 1, -1, -4.37114e-08, 874.82, 370.698 )
+default_length = 150.0
+
+[node name="jaw" type="Bone2D" parent="Skeleton2D/head"]
+position = Vector2( -17.5322, -9.74011 )
+rest = Transform2D( 1, 0, 0, 1, 0, 0 )

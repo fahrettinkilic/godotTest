@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://World/GrassBackgroundGray.png" type="Texture" id=1]
+
+[node name="BasicWorld" type="Node2D"]
+
+[node name="ambient" type="CanvasModulate" parent="."]
+color = Color( 0.196078, 0.196078, 0.196078, 1 )
+
+[node name="Background" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 960, 540 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( -480, -256, 1264, 672 )

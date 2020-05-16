@@ -1,0 +1,104 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Frostmage/Blizzard.png" type="Texture" id=1]
+[ext_resource path="res://Frostmage/Blizzard.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 256, 256, 256 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 256, 256, 256, 256 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 512, 256, 256 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 256, 512, 256, 256 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "animate",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=6]
+resource_name = "blizzard"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1, 6 ),
+"transitions": PoolRealArray( 2.21914, 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 1, 1 ), Color( 0.360083, 0.28583, 0.550165, 1 ) ]
+}
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 73.7564
+
+[node name="Blizzard" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 0
+mass = 0.00102041
+gravity_scale = 0.0
+script = ExtResource( 2 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+modulate = Color( 0.360083, 0.28583, 0.550165, 1 )
+position = Vector2( 3.8147e-06, 0.698348 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 5 )
+animation = "animate"
+frame = 4
+offset = Vector2( 260, -100 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+autoplay = "blizzard"
+anims/blizzard = SubResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 7 )
+
+[node name="Area2D" type="Area2D" parent="."]
+gravity_vec = Vector2( 0, 0 )
+gravity = 0.0
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource( 8 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -64.247
+margin_top = -62.8504
+margin_right = -0.247009
+margin_bottom = -48.8504
+rect_scale = Vector2( 2, 2 )
+text = "BLIZZARD"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="animation_finished" from="Sprite/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

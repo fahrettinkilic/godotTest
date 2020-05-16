@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Bars/purple/meter_bar_holder_center-repeating_purple.png" type="Texture" id=1]
+[ext_resource path="res://Bars/purple/meter_bar_center-repeating_purple.png" type="Texture" id=2]
+[ext_resource path="res://Player/BlizzardCDBar.gd" type="Script" id=3]
+[ext_resource path="res://Bars/icons/magic.png" type="Texture" id=4]
+[ext_resource path="res://Bars/purple/meter_bar_right_edge_purple.png" type="Texture" id=5]
+[ext_resource path="res://Bars/purple/meter_icon_holder_purple.png" type="Texture" id=6]
+[ext_resource path="res://Bars/purple/meter_bar_holder_right_edge_purple.png" type="Texture" id=7]
+
+[node name="Skill1CDBar" type="TextureProgress"]
+modulate = Color( 0.862745, 1, 1, 1 )
+margin_left = 140.0
+margin_top = 835.0
+margin_right = 548.0
+margin_bottom = 875.0
+rect_scale = Vector2( 1.1, 1.1 )
+value = 50.0
+nine_patch_stretch = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CDProgressBar" type="TextureProgress" parent="."]
+show_behind_parent = true
+margin_right = 408.0
+margin_bottom = 40.0
+value = 100.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 2 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Skill1" type="Label" parent="CDProgressBar"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -7.0
+margin_right = 32.0
+margin_bottom = 7.0
+text = "SKILL - 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightBR" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 24.0
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightBR_1" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 24.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Frame" type="TextureRect" parent="."]
+margin_left = -30.0
+margin_top = -1.0
+margin_right = 18.0
+margin_bottom = 47.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="Frame"]
+margin_left = 11.3636
+margin_top = 8.09088
+margin_right = 35.3636
+margin_bottom = 38.0909
+rect_scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Skill1Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+[connection signal="timeout" from="Skill1Timer" to="." method="_on_Skill1Timer_timeout"]

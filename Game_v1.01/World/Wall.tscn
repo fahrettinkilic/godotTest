@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://HUD/Health1.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 3.77258
+height = 38.0555
+
+[sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( -3.39474, -22.1483, -3.58846, 24.7299, 4.35371, 24.9236, 4.74113, -21.9545 )
+
+[node name="Wall" type="StaticBody2D"]
+light_mask = 0
+position = Vector2( 112, 632 )
+collision_mask = 5
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -2.53845, 1.64651 )
+scale = Vector2( 0.128299, 0.73062 )
+texture = ExtResource( 1 )
+offset = Vector2( 24, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.581131, 1.42694 )
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 2 )

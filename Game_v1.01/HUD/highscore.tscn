@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Practice/RichTextLabel.gd" type="Script" id=1]
+
+[node name="highscore" type="RichTextLabel"]
+margin_left = 1552.12
+margin_top = 21.9399
+margin_right = 1644.12
+margin_bottom = 38.9399
+rect_scale = Vector2( 5, 5 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
