@@ -1,5 +1,6 @@
 extends Node2D
-
+var variable = 0
+var fayronunaminakoyam = 31
 func _physics_process(delta):
 	pass
 
