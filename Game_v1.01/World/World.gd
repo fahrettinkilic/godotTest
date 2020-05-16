@@ -1,5 +1,7 @@
 extends Node2D
 
+var variable = 0
+
 func _physics_process(delta):
 	pass
 
