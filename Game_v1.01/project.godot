@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 PlayerStats="*res://Player/PlayerStats.tscn"
 GlobalCharacterSelect="*res://Player/GlobalCharacterSelect.gd"
+DataImport="*res://Skill_data/DataImport.gd"
 
 [display]
 

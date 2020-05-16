@@ -1,0 +1,76 @@
+﻿{
+    "Sayfa1": [
+        {
+            "SkillName": "Blink",
+            "SkillType": "N/A",
+            "SkillDamage": "N/A",
+            "SkillProjectileSpeed": "N/A",
+            "SkillRadius": "N/A",
+            "SkillDamageDelayTime": "N/A",
+            "SkillRemoveDelayTime": "N/A"
+        },
+        {
+            "SkillName": "Silence",
+            "SkillType": "AOE",
+            "SkillDamage": "N/A",
+            "SkillProjectileSpeed": "N/A",
+            "SkillRadius": "50",
+            "SkillDamageDelayTime": "0.5",
+            "SkillRemoveDelayTime": "N/A"
+        },
+        {
+            "SkillName": "Blizzard",
+            "SkillType": "AOE",
+            "SkillDamage": "2",
+            "SkillProjectileSpeed": "N/A",
+            "SkillRadius": "100",
+            "SkillDamageDelayTime": "0.5",
+            "SkillRemoveDelayTime": "5.5"
+        },
+        {
+            "SkillName": "Frostbolt",
+            "SkillType": "Target",
+            "SkillDamage": "3",
+            "SkillProjectileSpeed": "500",
+            "SkillRadius": "N/A",
+            "SkillDamageDelayTime": "N/A",
+            "SkillRemoveDelayTime": "N/A"
+        },
+        {
+            "SkillName": "fast_attack",
+            "SkillType": "Target",
+            "SkillDamage": "N/A",
+            "SkillProjectileSpeed": "2500",
+            "SkillRadius": "N/A",
+            "SkillDamageDelayTime": "N/A",
+            "SkillRemoveDelayTime": "N/A"
+        },
+        {
+            "SkillName": "bleed_attack",
+            "SkillType": "Target",
+            "SkillDamage": "3",
+            "SkillProjectileSpeed": "2500",
+            "SkillRadius": "N/A",
+            "SkillDamageDelayTime": "N/A",
+            "SkillRemoveDelayTime": "N/A"
+        },
+        {
+            "SkillName": "shadowbolt",
+            "SkillType": "Target",
+            "SkillDamage": "3",
+            "SkillProjectileSpeed": "500",
+            "SkillRadius": "N/A",
+            "SkillDamageDelayTime": "N/A",
+            "SkillRemoveDelayTime": "N/A"
+        },
+        {
+            "SkillName": "summon_demon",
+            "SkillType": "AOE",
+            "SkillDamage": "1",
+            "SkillProjectileSpeed": "N/A",
+            "SkillRadius": "100",
+            "SkillDamageDelayTime": "0.5",
+            "SkillRemoveDelayTime": "30"
+        }
+    ]
+}
