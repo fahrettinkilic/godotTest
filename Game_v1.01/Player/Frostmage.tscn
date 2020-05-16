@@ -10,7 +10,7 @@
 
 [node name="Frostmage" instance=ExtResource( 1 )]
 modulate = Color( 0.0235294, 0, 1, 1 )
-position = Vector2( 68.0467, 95.9634 )
+position = Vector2( 958.901, 501.656 )
 script = ExtResource( 2 )
 
 [node name="Sprite" parent="." index="0"]
@@ -20,24 +20,22 @@ self_modulate = Color( 0, 0.976471, 1, 1 )
 [node name="CollisionShape" parent="." index="2"]
 visible = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="7"]
-
-[node name="Ammo" parent="CanvasLayer" index="0" instance=ExtResource( 4 )]
-margin_left = 221.38
-margin_top = 980.581
-margin_right = 392.38
-margin_bottom = 1043.58
-
-[node name="HealthBar" parent="CanvasLayer" index="1" instance=ExtResource( 5 )]
-margin_left = 119.381
-margin_top = 87.3176
-margin_right = 759.381
-margin_bottom = 151.318
-
-[node name="PowerBar" type="CanvasLayer" parent="." index="10"]
+[node name="PowerBar" type="CanvasLayer" parent="." index="9"]
 
 [node name="BlinkCDBar" parent="PowerBar" index="0" instance=ExtResource( 6 )]
 
 [node name="Skill1CDBar" parent="PowerBar" index="1" instance=ExtResource( 7 )]
 
 [node name="Skill2CDBar" parent="PowerBar" index="2" instance=ExtResource( 3 )]
+
+[node name="Ammo" parent="PowerBar" index="3" instance=ExtResource( 4 )]
+margin_left = 221.38
+margin_top = 980.581
+margin_right = 392.38
+margin_bottom = 1043.58
+
+[node name="HealthBar" parent="PowerBar" index="4" instance=ExtResource( 5 )]
+margin_left = 119.381
+margin_top = 87.3176
+margin_right = 759.381
+margin_bottom = 151.318

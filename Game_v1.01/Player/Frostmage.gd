@@ -12,7 +12,7 @@ var frostbolt = preload("res://Frostmage/Frostbolt.tscn")
 var blizzard = preload("res://Frostmage/Blizzard.tscn")
 var blizzard_pos = Vector2.ZERO
 
-onready var blizzard_cooldown = get_node("PowerBar/BlizzardCDBar")
+onready var blizzard_cooldown = get_node("PowerBar/Skill1CDBar")
 onready var blizzard_cd = Cooldown.new(10)
 onready var frostbolt_cd = Cooldown.new(10)
 onready var blink_cd = Cooldown.new(10)

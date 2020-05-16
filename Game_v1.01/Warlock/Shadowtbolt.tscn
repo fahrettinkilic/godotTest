@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Player/Deneme.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Bullet/Bullet1.png" type="Texture" id=2]
+[ext_resource path="res://Frostmage/Frostbolt.gd" type="Script" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 3.61927
+height = 15.9325
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 4.84014
+height = 16.1169
+
+[node name="Frostbolt" type="RigidBody2D"]
+collision_layer = 4
+gravity_scale = 0.0
+script = ExtResource( 3 )
+
+[node name="Particles2D" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.329412, 0, 0.811765, 1 )
+position = Vector2( -15, 0 )
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0, 0.203922, 1, 1 )
+rotation = 1.5708
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 10, 16, 47 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -6.5008, 0.110184 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -6.39062, 0.110184 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -56.0117
+margin_top = -23.8426
+margin_right = 17.9883
+margin_bottom = -9.84258
+rect_scale = Vector2( 1.5, 1.5 )
+text = "FROSTBOLT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

@@ -12,7 +12,7 @@ _data = [ Vector2( 0, 0.512914 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 
 [sub_resource type="CurveTexture" id=3]
 curve = SubResource( 2 )
 
-[sub_resource type="ParticlesMaterial" id=4]
+[sub_resource type="ParticlesMaterial" id=6]
 emission_shape = 1
 emission_sphere_radius = 1.0
 flag_disable_z = true
@@ -35,5 +35,5 @@ position = Vector2( -16, 0 )
 scale = Vector2( 2, 0.25 )
 preprocess = 0.1
 fixed_fps = 25
-process_material = SubResource( 4 )
+process_material = SubResource( 6 )
 texture = ExtResource( 1 )

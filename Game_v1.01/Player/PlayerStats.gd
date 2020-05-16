@@ -32,3 +32,4 @@ func set_bullet(value):
 func _ready():
 	self.bullet = max_bullet
 	self.health = max_health
+	

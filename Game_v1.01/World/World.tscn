@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Player/Deneme.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Player/Frostmage.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/World.gd" type="Script" id=10]
 
 [node name="World" type="Node2D"]
@@ -56,10 +55,6 @@ __meta__ = {
 [node name="Particles2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 991.012, 805.61 )
 scale = Vector2( -10.0435, 6.46513 )
-
-[node name="Frostmage2" parent="." instance=ExtResource( 3 )]
-
-[node name="Particles2D2" type="Particles2D" parent="."]
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="Finish" to="." method="_on_Finish_pressed"]
 [connection signal="pressed" from="Practice" to="." method="_on_Practice_pressed"]
